@@ -1,1 +1,158 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Chengzhi Li</title>
+    <script src="main.css"></script>
+</head>
+
+<style>
+body {font-family: Arial;}
+
+/* Style the tab */
+div.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+div.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+div.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+div.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    -webkit-animation: fadeEffect 1s;
+    animation: fadeEffect 1s;
+}
+
+/* Fade in tabs */
+@-webkit-keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+</style>
+
+<div class="tab">
+  <button class="tablinks" onclick="switchFacade(event, 'Intro')" id="defaultOpen">Intro</button>
+  <button class="tablinks" onclick="switchFacade(event, 'Projects')">Projects</button>
+  <button class="tablinks" onclick="switchFacade(event, 'Hobbies')">Hobbies</button>
+</div>
+
+<div id="Intro" class="tabcontent">
+  <h2>Introduction</h2>
+  <p>Chengzhi Li comes from Nanjing, China and is currently an undergraudate
+      student studying Business and Computer Science (BUCS) program at University
+      of British Columbia (UBC), Vancouver, Canada. Here is the
+      <a href="Chengzhi_Li_CV.pdf">Curriculum Vitae</a> </p>
+
+  <h3>Education</h3>
+  <p>2013.9 - Present: Bachelor of Commerce(BCom) in Combined Major in Business
+      and Computer Science</p>
+
+  <h3>Work Experience</h3>
+  <p>2015.9 - 2016.8: Agile Developer Intern at SAP Canada Inc., worked in the
+  Development Operations (DevOps) team in Vnacouver</p>
+
+  <h3>Awards</h3>
+  <li>Trek Excellence Scholarship (top 5%) in 2016 and 2017</li>
+  <li>Sauder School of Business International Student Scholarship in 2017</li>
+  <li>Dean's Honor Roll in 2014 and 2016</li>
+
+  <h3>Course works</h3>
+  <p><b>Math</b>: Differential Calculus, Integral Calculus, Calculus III, Matrix
+  Algebra, Elementary Differential Equations</p>
+
+  <p><b>Computer Science</b>: Computation, Programs and Programming, Models of
+  Computation (including discrete math), Software Construction, Introudction to
+  Computer Systems, Basic Algorithm and Data Structures, Introduction to
+  Relational Database, Introudction to Software Engineering, Numerical Approximation
+  and Discretization, Intermediate Alogrithm Design and Analysis, Machine Learning
+  and Data Mining, Advanced Relational Database</p>
+
+  <p><b>Finance and Economics</b>: Principles of Microeconomics, Principles of
+  Macroeconomics, Financial Accounting, Managerial Accounting, Introduction to
+  Finance</p>
+
+</div>
+
+<div id="Projects" class="tabcontent">
+  <h2>Projects</h2>
+
+
+  <h3>Personal Project</h3>
+  <h4>Wechat Mini Program</h4>
+  <p>Allows users to record their training amount directly through wechat mini
+  program</p>
+
+  <h3>School Projects</h3>
+
+  <h4>Insight UBC</h4>
+  <p>Project for course <i>Introudction to Software Engineering</i></p>
+
+  <h4>Resource Managemnt Project: Unisex Washroom Problem</h4>
+  <p>Project for course <i>Introudction to Computer Systems</i></p>
+
+  <h4>Universal Puzzle Solver</h4>
+  <p>Project for course <i>Basic Algorithm and Data Structures</i></p>
+
+  <h4>Restaurant Quiz</h4>
+  <p>Project for course <i>Software Construction</i></p>
+</div>
+
+<div id="Hobbies" class="tabcontent">
+  <h2>Hobbies</h3>
+
+  <h3>Tennis</h3>
+  <p>I started playing tennis when I was 12. During my high school, I joined
+  a tennis club and represented school to play against other other high
+  schools. My current tennis level is around 4.0.</p>
+
+  <h3>Table Tennis</h3>
+  <p>I learnt how to play table tennis when I was about 10. I still play table
+  tennis from time to time with friends</p>
+
+  <h3>Workout</h3>
+  <p>I have been doing muscle training for about 2 years. My personal
+  record: bench press(185lb), squat(275lb), deadlift(225lb)</p>
+
+<script>
+document.getElementById("defaultOpen").click();
+function switchFacade(evt, facadeName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(facadeName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+</script>

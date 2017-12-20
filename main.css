@@ -1,8 +1,12 @@
-/* Style the tab */
+h1   {color: #05627F;}
+h2   {color: #05627F;}
+h3   {color: #05627F;}
+
+/* Style the tabs on the top */
 .tab {
     overflow: hidden;
-    border: 1px solid #ccc;
-    background-color: #f1f1f1;
+    background-color: #E6E6E6;
+    font-size: 130%;
 }
 
 /* Style the buttons inside the tab */
@@ -44,4 +48,16 @@ div.tab button.active {
 @keyframes fadeEffect {
     from {opacity: 0;}
     to {opacity: 1;}
+}
+
+#chengzhi {
+    float: left;
+    width: 168px;
+    height: 300px;
+    margin: 0px 20px 5px 0px;
+    border-radius: 5px;
+}
+
+p, li {
+    font-size: 1em
 }

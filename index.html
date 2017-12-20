@@ -2,60 +2,10 @@
 <html lang="en">
 <head>
     <title>Chengzhi Li</title>
-    <script src="main.css"></script>
+    <link rel="stylesheet" href="main.css">
+    <meta charset="UTF-8">
+    <!-- <script src="main.js"></script> -->
 </head>
-
-<style>
-body {font-family: Arial;}
-
-/* Style the tab */
-div.tab {
-    overflow: hidden;
-    border: 1px solid #ccc;
-    background-color: #f1f1f1;
-}
-
-/* Style the buttons inside the tab */
-div.tab button {
-    background-color: inherit;
-    float: left;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 14px 16px;
-    transition: 0.3s;
-    font-size: 17px;
-}
-
-/* Change background color of buttons on hover */
-div.tab button:hover {
-    background-color: #ddd;
-}
-
-/* Create an active/current tablink class */
-div.tab button.active {
-    background-color: #ccc;
-}
-
-/* Style the tab content */
-.tabcontent {
-    display: none;
-    padding: 6px 12px;
-    -webkit-animation: fadeEffect 1s;
-    animation: fadeEffect 1s;
-}
-
-/* Fade in tabs */
-@-webkit-keyframes fadeEffect {
-    from {opacity: 0;}
-    to {opacity: 1;}
-}
-
-@keyframes fadeEffect {
-    from {opacity: 0;}
-    to {opacity: 1;}
-}
-</style>
 
 <div class="tab">
   <button class="tablinks" onclick="switchFacade(event, 'Intro')" id="defaultOpen">Intro</button>
@@ -65,18 +15,19 @@ div.tab button.active {
 
 <div id="Intro" class="tabcontent">
   <h2>Introduction</h2>
-  <p>Chengzhi Li comes from Nanjing, China and is currently an undergraudate
-      student studying Business and Computer Science (BUCS) program at University
+  <img src="images/Chengzhi_Li.png" id='chengzhi'/>
+  <p>Chengzhi Li is currently an undergraudate student studying <a href="https://mybcom.sauder.ubc.ca/courses-money-enrolment/program-requirements/combined-major-in%C2%A0business-and-computer-science">Business and
+      Computer Science (BUCS) program</a> at the University
       of British Columbia (UBC), Vancouver, Canada. Here is the
-      <a href="Chengzhi_Li_CV.pdf">Curriculum Vitae</a> </p>
+      <a href="Chengzhi_Li_CV.pdf">Curriculum Vitae.</a> </p>
 
   <h3>Education</h3>
   <p>2013.9 - Present: Bachelor of Commerce(BCom) in Combined Major in Business
       and Computer Science</p>
 
   <h3>Work Experience</h3>
-  <p>2015.9 - 2016.8: Agile Developer Intern at SAP Canada Inc., worked in the
-  Development Operations (DevOps) team in Vnacouver</p>
+  <p>2015.9 - 2016.8: Agile Developer Intern at <a href="https://www.sap.com/canada/index.html">
+      SAP Canada</a>, working in Development Operations (DevOps) team in Vancouver</p>
 
   <h3>Awards</h3>
   <li>Trek Excellence Scholarship (top 5%) in 2016 and 2017</li>
@@ -88,10 +39,10 @@ div.tab button.active {
   Algebra, Elementary Differential Equations</p>
 
   <p><b>Computer Science</b>: Computation, Programs and Programming, Models of
-  Computation (including discrete math), Software Construction, Introudction to
+  Computation (including discrete math), Software Construction, Introduction to
   Computer Systems, Basic Algorithm and Data Structures, Introduction to
-  Relational Database, Introudction to Software Engineering, Numerical Approximation
-  and Discretization, Intermediate Alogrithm Design and Analysis, Machine Learning
+  Relational Database, Introduction to Software Engineering, Numerical Approximation
+  and Discretization, Intermediate Algorithm Design and Analysis, Machine Learning
   and Data Mining, Advanced Relational Database</p>
 
   <p><b>Finance and Economics</b>: Principles of Microeconomics, Principles of
@@ -103,7 +54,6 @@ div.tab button.active {
 <div id="Projects" class="tabcontent">
   <h2>Projects</h2>
 
-
   <h3>Personal Project</h3>
   <h4>Wechat Mini Program</h4>
   <p>Allows users to record their training amount directly through wechat mini
@@ -113,15 +63,22 @@ div.tab button.active {
 
   <h4>Insight UBC</h4>
   <p>Project for course <i>Introudction to Software Engineering</i></p>
+  <li>Created a website using extensive JavaScript with a user-friendly UI,
+      allowing users to import datasets containing UBC courses and query information</li>
+  <li>Initiated efficient course searching and developed an automatic scheduling
+    system</li>
+  <li>Invented a room scheduler that assigns classes to classrooms matching room
+    capacity and class size</li>
 
-  <h4>Resource Managemnt Project: Unisex Washroom Problem</h4>
+  <h4>Resource and Transportation Optimization Algorithm</h4>
   <p>Project for course <i>Introudction to Computer Systems</i></p>
-
-  <h4>Universal Puzzle Solver</h4>
-  <p>Project for course <i>Basic Algorithm and Data Structures</i></p>
-
-  <h4>Restaurant Quiz</h4>
-  <p>Project for course <i>Software Construction</i></p>
+  <li>Volunteered in the unisex public washroom project to support the transgender
+      population </li>
+  <li>Created a C program using multithreading, monitors (mutexes) and
+      conditional variables and optimized thread scheduling, implementing on
+      resource and transportation optimization</li>
+  <li>Ensured no deadlock and the fairness for multiple threads entering the
+      critical section with a reasonable waiting time by using conditional variables</li>
 </div>
 
 <div id="Hobbies" class="tabcontent">
@@ -129,16 +86,17 @@ div.tab button.active {
 
   <h3>Tennis</h3>
   <p>I started playing tennis when I was 12. During my high school, I joined
-  a tennis club and represented school to play against other other high
+  a tennis club and represented the school to play against other high
   schools. My current tennis level is around 4.0.</p>
 
   <h3>Table Tennis</h3>
-  <p>I learnt how to play table tennis when I was about 10. I still play table
+  <p>I learnt how to play table tennis when I was 10. I still play table
   tennis from time to time with friends</p>
 
   <h3>Workout</h3>
   <p>I have been doing muscle training for about 2 years. My personal
   record: bench press(185lb), squat(275lb), deadlift(225lb)</p>
+</div>
 
 <script>
 document.getElementById("defaultOpen").click();

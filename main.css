@@ -61,3 +61,16 @@ div.tab button.active {
 p, li {
     font-size: 1em
 }
+
+.rotate90 {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+#sc1,#sc2,#sc3,#sc4,#sc5{
+    max-width:30%;
+    max-height:30%;
+}
